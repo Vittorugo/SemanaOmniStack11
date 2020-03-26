@@ -1,0 +1,23 @@
++ Apresentação da aplicação
+ - App para fazer doações a ONGs.
+	
++ Configurar ambiente de desenvolvimento
+ -Node.js & NPM
+ -VSCode
+
++ Entender sobre back-end & front-end
+ - Back-end
+	*Regras de negócio;
+	*Conexão banco de dados;
+	*Envio de e-mail;
+	*Comunicação com webservices;
+	*Autenticação do usuário;
+	*Criptografia e segurança;
+ 
+ - Front-end
+	*React;
+	*Serviços externos;
+
++ Criar projeto com Node.js
+
++ Entender sobre React & SPA

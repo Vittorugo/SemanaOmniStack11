@@ -1,0 +1,35 @@
++ Node.js & Express
+ - Rotas e recursos
+ - Métodos HTTP
+	*GET: Buscar informações do back-end
+	*POST: Criar uma informação do back-end
+	*PUT: Alterar uma informação no back-end
+	*DELETE: Deletar uma informação no back-end
+ - Tipos de parâmetros
+	* Query Params: Parametros nomeados enviados na rota após "?" (filtros, paginação) - request.query
+	* Route Params: Parametros utilizados para identificar recursos - request.params
+	* Body Params: Corpo da requisição, utilizado para alterar recursos - request.body
++ Configurando o nodemon
+ - yarn add nodemon -D
++ Utilizando insomnia
++ Diferença entre bd
+ - SQL: MySQL, SQLite, PostgreSQL, Oracle, Microsoft SQL Server
+ - NoSQL: MongoDB, CouchDB, etc
+ - Driver: Select * from users
+ - Query Builder: table('users').select('*').where()
++ Pensando em entidades e funcionalidades
+ - Entidades: 
+	* ONG
+	* Incidente
+ - Funcionalidades:
+	* Login
+	* Logout
+	* Cadastro de ONG
+	* Cadastro de casos incidentes
+	* Deletar casos
+	* Listar casos da ong
+	* Listar todos os casos
+	* Entrar em contato com a ONG 
++ Construção do back-end
++ Adicionando módulo CORS
++ Enviando back-end no Github
