@@ -6,10 +6,10 @@ import {Link, useHistory} from 'react-router-dom';
 import api from '../../services/api';
 
 function NewIncident(){
-  const [title, setTitle] = useState(); 
-  const [description, setDescription] = useState(); 
-  const [value, setValue] = useState();
-  const ongID = localStorage.getItem('ongId');
+  const [title, setTitle] = useState(''); 
+  const [description, setDescription] = useState(''); 
+  const [value, setValue] = useState('');
+  const ongId = localStorage.getItem('ongId');
   const history = useHistory();
 
   async function handleNewIncident(e){
@@ -24,11 +24,11 @@ function NewIncident(){
     try{
       await api.post('/incidents', data, {
         headers: {
-          Authorization: ongID,
+          Authorization: ongId,
         }
       })
 
-      history.pushState('/profile');
+      history.push('/profile');
     } catch (err){
       alert('Erro ao cadastrar caso. Tente novamente!')
     }
@@ -45,7 +45,7 @@ function NewIncident(){
             Voltar para home
           </Link>      
         </section>
-        <form>
+        <form onSubmit={handleNewIncident}>
           <input 
             placeholder="Titulo do caso"
             value={title}
@@ -62,7 +62,7 @@ function NewIncident(){
             onChange={e => setValue(e.target.value)}
           />
           
-          <button onClick={handleNewIncident} className="button" type="submit"> Cadastrar</button>
+          <button className="button" type="submit"> Cadastrar</button>
         </form>
       </div>
     </div>
